@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ink Point × Xperts Consulting — Propuesta Comercial TOTVS Fluig 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d0d0d;
+  --ink-soft: #1a1a1a;
+  --paper: #f9f9f9;
+  --paper-warm: #f2f2f2;
+  --red: #cc2218;
+  --red-deep: #a81a11;
+  --red-pale: #fdecea;
+  --gold: #c9a84c;
+  --gold-pale: #fdf6e3;
+  --accent: #cc2218;
+  --text: #1c1c1e;
+  --text-soft: #4a4a4a;
+  --text-muted: #8a8a8a;
+  --border: rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 48px;
+  background: rgba(250,248,244,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-brand { display: flex; align-items: center; gap: 14px; font-size: 13px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+.nav-brand span { color: var(--red-deep); }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { font-size: 13px; color: var(--text-soft); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--red-deep); }
+.nav-cta { background: var(--ink); color: #fff; padding: 10px 22px; border-radius: 100px; font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+.nav-cta:hover { background: var(--red-deep); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 120px 48px 80px;
+  gap: 64px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(204,34,24,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: 200px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--red-pale); color: var(--red-deep);
+  padding: 6px 16px; border-radius: 100px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.hero-badge::before { content: '●'; font-size: 8px; animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.hero-left h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.08;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.hero-left h1 em {
+  font-style: italic;
+  color: var(--red-deep);
+}
+.hero-left p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-soft);
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--ink); color: #fff;
+  padding: 16px 32px; border-radius: 100px;
+  font-size: 15px; font-weight: 600;
+  text-decoration: none; transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--red-deep); transform: translateY(-2px); }
+.btn-secondary {
+  background: transparent; color: var(--ink);
+  padding: 16px 32px; border-radius: 100px;
+  font-size: 15px; font-weight: 600;
+  text-decoration: none; border: 2px solid var(--ink);
+  transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--red-deep); color: var(--red-deep); }
+
+.hero-right {
+  background: var(--ink);
+  border-radius: 24px;
+  padding: 48px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero-right::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 250px; height: 250px;
+  background: radial-gradient(circle, rgba(204,34,24,0.3) 0%, transparent 70%);
+}
+.hero-stats-title {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 32px;
+}
+.hero-stat {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.hero-stat:last-child { border-bottom: none; }
+.hero-stat-label { font-size: 14px; color: rgba(255,255,255,0.6); }
+.hero-stat-value { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #fff; }
+.hero-stat-value span { font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--red); }
+
+/* SECTIONS */
+section { padding: 100px 48px; }
+.section-label {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--red-deep);
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-label::before { content: ''; display: block; width: 32px; height: 2px; background: var(--red-deep); }
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900; line-height: 1.1;
+  color: var(--ink); margin-bottom: 20px;
+}
+.section-title em { font-style: italic; color: var(--red-deep); }
+.section-desc { font-size: 17px; color: var(--text-soft); line-height: 1.7; max-width: 560px; margin-bottom: 64px; }
+
+/* DIAGNOSIS */
+.diagnosis { background: var(--ink); color: #fff; }
+.diagnosis .section-label { color: var(--red); }
+.diagnosis .section-label::before { background: var(--red); }
+.diagnosis .section-title { color: #fff; }
+.diagnosis .section-title em { color: var(--red); }
+.diagnosis .section-desc { color: rgba(255,255,255,0.6); }
+
+.pains-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px; overflow: hidden;
+  margin-bottom: 64px;
+}
+.pain-card {
+  background: rgba(255,255,255,0.04);
+  padding: 36px 32px;
+  transition: background 0.2s;
+}
+.pain-card:hover { background: rgba(204,34,24,0.08); }
+.pain-icon { font-size: 28px; margin-bottom: 16px; }
+.pain-title { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+.pain-desc { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+/* FLUIG SOLUTION */
+.solutions { background: var(--paper); }
+.solutions-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+}
+.solution-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.solution-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,0.08); }
+.solution-card.featured {
+  background: #1e1e1e;
+  border-color: var(--red-deep);
+  border-width: 2px;
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+  box-shadow: 0 0 0 1px rgba(204,34,24,0.3), 0 24px 60px rgba(204,34,24,0.15);
+}
+.solution-card.featured::after {
+  content: '';
+  position: absolute; top: -80px; right: -80px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(204,34,24,0.35) 0%, transparent 70%);
+}
+.sol-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px; color: var(--red-deep);
+  font-weight: 500; margin-bottom: 16px;
+  letter-spacing: 0.06em;
+}
+.solution-card.featured .sol-num { color: var(--red); }
+.sol-title { font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 14px; line-height: 1.3; }
+.solution-card.featured .sol-title { color: #fff; font-size: 28px; }
+.sol-desc { font-size: 15px; color: var(--text-soft); line-height: 1.7; margin-bottom: 24px; }
+.solution-card.featured .sol-desc { color: rgba(255,255,255,0.65); }
+.sol-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.sol-tag {
+  background: var(--red-pale); color: var(--red-deep);
+  padding: 5px 14px; border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+}
+.solution-card.featured .sol-tag { background: rgba(204,34,24,0.15); color: var(--red); }
+
+.sol-inkpoint {
+  background: var(--red-pale);
+  border-radius: 14px; padding: 24px;
+  border-left: 4px solid var(--red-deep);
+}
+.solution-card.featured .sol-inkpoint { background: rgba(204,34,24,0.1); border-left-color: var(--red); }
+.sol-inkpoint-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red-deep); margin-bottom: 10px; }
+.solution-card.featured .sol-inkpoint-label { color: var(--red); }
+.sol-inkpoint p { font-size: 14px; color: var(--text-soft); line-height: 1.6; }
+.solution-card.featured .sol-inkpoint p { color: rgba(255,255,255,0.7); }
+
+/* BUDGET — FIX: removed extra padding-left/right, use uniform padding */
+.budget { background: var(--paper-warm); padding: 100px 48px; }
+.budget-container { max-width: 100%; width: 100%; box-sizing: border-box; }
+.pricing-table { width: 100%; }
+.payment-plans { width: 100%; }
+.cashflow-section { width: 100%; }
+
+.pricing-note {
+  background: #fff7e6;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 14px; padding: 20px 24px;
+  display: flex; align-items: flex-start; gap: 14px;
+  margin-bottom: 40px;
+  font-size: 14px; color: var(--text-soft); line-height: 1.6;
+}
+.pricing-note-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+
+/* BIG PRICING TABLE */
+.pricing-table {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.pricing-table-header {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 20px 36px;
+  background: var(--ink);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.pricing-table-header span {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.7);
+}
+.pricing-row {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 22px 36px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  align-items: center;
+  transition: background 0.15s;
+}
+.pricing-row:hover { background: rgba(204,34,24,0.03); }
+.pricing-row:last-child { border-bottom: none; }
+.pricing-row.section-header {
+  background: #f5f5f5;
+  padding: 14px 36px;
+}
+.pricing-row.section-header span {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--red-deep);
+}
+.pr-name { font-size: 14px; color: var(--text); font-weight: 500; }
+.pr-name small { display: block; font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+.pr-val { font-size: 15px; color: var(--ink); font-weight: 600; text-align: right; }
+.pr-val.highlight { color: var(--red-deep); }
+.pr-val.muted { color: var(--text-muted); font-size: 13px; }
+.pr-val.discount { color: var(--red-deep); font-weight: 700; }
+
+.pricing-total {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 28px 36px;
+  background: linear-gradient(135deg, #fdecea, #fff5f5);
+  border-top: 2px solid rgba(204,34,24,0.2);
+}
+.pt-label { font-size: 14px; font-weight: 700; color: var(--ink); }
+.pt-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 700; color: var(--red-deep);
+  text-align: right;
+}
+
+/* PAYMENT PLAN */
+.payment-plans {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  margin-bottom: 32px;
+}
+.payment-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  border: 2px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.payment-card.recommended {
+  border-color: var(--red-deep);
+}
+.rec-badge {
+  position: absolute; top: 20px; right: 20px;
+  background: var(--red-deep); color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 100px;
+}
+.payment-type { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
+.payment-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; font-weight: 900; color: var(--ink); line-height: 1;
+  margin-bottom: 6px;
+}
+.payment-amount sup { font-size: 20px; vertical-align: top; margin-top: 8px; }
+.payment-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.payment-detail { font-size: 14px; color: var(--text-soft); line-height: 1.8; }
+.payment-detail strong { color: var(--ink); }
+
+/* ROADMAP */
+.roadmap { background: #fff; }
+.timeline {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute; top: 36px; left: 12%; right: 12%;
+  height: 2px; background: var(--border); z-index: 0;
+}
+.timeline-phase {
+  padding: 0 32px;
+  position: relative; z-index: 1;
+}
+.phase-dot {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 900;
+  margin-bottom: 28px;
+  position: relative;
+}
+.phase-dot.p1 { background: var(--red-pale); color: var(--red-deep); }
+.phase-dot.p2 { background: var(--ink); color: var(--red); }
+.phase-dot.p3 { background: var(--red-deep); color: #fff; }
+.phase-weeks { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+.phase-title { font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
+.phase-items { list-style: none; }
+.phase-items li {
+  font-size: 14px; color: var(--text-soft); padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 10px;
+  line-height: 1.5;
+}
+.phase-items li::before { content: '→'; color: var(--red-deep); flex-shrink: 0; font-weight: 700; }
+
+/* WHY US */
+.whyus { background: var(--paper-warm); }
+.why-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.why-card {
+  background: #fff; border-radius: 20px; padding: 36px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+}
+.why-card:hover { transform: translateY(-4px); }
+.why-icon { font-size: 32px; margin-bottom: 20px; }
+.why-title { font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
+.why-desc { font-size: 14px; color: var(--text-soft); line-height: 1.7; }
+
+/* CTA */
+.cta-section {
+  background: var(--ink);
+  text-align: center;
+  padding: 120px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(204,34,24,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 64px); font-weight: 900;
+  color: #fff; line-height: 1.1; margin-bottom: 20px;
+  position: relative;
+}
+.cta-section h2 em { font-style: italic; color: var(--red); }
+.cta-section p { font-size: 18px; color: rgba(255,255,255,0.6); max-width: 500px; margin: 0 auto 48px; line-height: 1.7; position: relative; }
+.cta-cards {
+  display: flex; justify-content: center; gap: 24px;
+  flex-wrap: wrap; margin-bottom: 56px; position: relative;
+}
+.cta-contact {
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px; padding: 32px 40px;
+  text-align: left; min-width: 260px;
+}
+.cta-contact-name { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.cta-contact-role { font-size: 13px; color: var(--red); margin-bottom: 20px; }
+.cta-contact-info { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 2; }
+.cta-contact-info a { color: rgba(255,255,255,0.8); text-decoration: none; }
+.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+.btn-white { background: #fff; color: var(--ink); padding: 18px 36px; border-radius: 100px; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-white:hover { background: var(--red); color: #fff; }
+.btn-outline-white { background: transparent; color: #fff; padding: 18px 36px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-outline-white:hover { border-color: var(--red); color: var(--red); }
+
+/* FOOTER */
+footer {
+  padding: 40px 48px;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 13px; color: var(--text-muted);
+}
+.footer-brand { font-weight: 600; color: var(--ink); }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-left { animation: fadeUp 0.8s ease both; }
+.hero-right { animation: fadeUp 0.8s 0.2s ease both; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
+  section { padding: 80px 24px; }
+  .budget { padding: 80px 24px; }
+  .pains-grid { grid-template-columns: 1fr; }
+  .solutions-grid { grid-template-columns: 1fr; }
+  .solution-card.featured { grid-column: 1; grid-template-columns: 1fr; }
+  .payment-plans { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; }
+  .timeline::before { display: none; }
+  .why-grid { grid-template-columns: 1fr; }
+  .pricing-table-header, .pricing-row, .pricing-total { grid-template-columns: 2fr 1fr; }
+  .pricing-table-header span:nth-child(n+3),
+  .pricing-row > *:nth-child(n+3),
+  .pricing-total > *:nth-child(n+3) { display: none; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    🖨️ The Ink Point <span>×</span> Xperts Consulting
+  </div>
+  <div class="nav-links">
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#soluciones">Soluciones</a>
+    <a href="#presupuesto">Presupuesto</a>
+    <a href="#roadmap">Roadmap</a>
+  </div>
+  <a href="#cta" class="nav-cta">Hablar con Rocío →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:120px">
+  <div class="hero-left">
+    <div class="hero-badge">Propuesta Exclusiva · 2026</div>
+    <h1>Digitalización total para The <em>Ink Point</em></h1>
+    <p>Una propuesta diseñada específicamente para digitalizar y automatizar los procesos comerciales, operativos y de gestión de The Ink Point — la gráfica corporativa B2B que mueve grandes marcas.</p>
+    <div class="hero-actions">
+      <a href="#soluciones" class="btn-primary">Ver propuesta completa ↓</a>
+      <a href="#presupuesto" class="btn-secondary">Ver presupuesto</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats-title">La inversión en resumen</div>
+    <div class="hero-stat">
+      <span class="hero-stat-label">Tasa de adhesión</span>
+      <div class="hero-stat-value">12 <span>cuotas de $700K</span></div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-label">Implementación</span>
+      <div class="hero-stat-value">12 <span>cuotas USD 405</span></div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-label">Costo hora implementación</span>
+      <div class="hero-stat-value">USD <span>45/h</span></div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-label">Total implementación</span>
+      <div class="hero-stat-value">USD <span>4.860</span></div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-label">Validez de condiciones</span>
+      <div class="hero-stat-value" style="color:var(--red)">Mayo <span>2026</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSIS -->
+<section class="diagnosis" id="diagnostico">
+  <div class="section-label">Diagnóstico</div>
+  <h2 class="section-title">Los desafíos actuales de <em>The Ink Point</em></h2>
+  <p class="section-desc">Empresas gráficas B2B con múltiples productos, clientes corporativos y procesos manuales enfrentan siempre los mismos cuellos de botella. Los identificamos para ustedes.</p>
+
+  <div class="pains-grid">
+    <div class="pain-card">
+      <div class="pain-icon">📋</div>
+      <div class="pain-title">Cotizaciones manuales y lentas</div>
+      <div class="pain-desc">Cada cotización para clientes como Sika o Casa Lucía pasa por emails y archivos Excel. Errores, demoras y falta de trazabilidad en el proceso comercial.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">📁</div>
+      <div class="pain-title">Documentos dispersos</div>
+      <div class="pain-desc">Artes finales, archivos de producción, órdenes de compra y remitos guardados en carpetas de red o correo electrónico sin estructura centralizada.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">⏱️</div>
+      <div class="pain-title">Aprobaciones que no cierran</div>
+      <div class="pain-desc">El flujo de aprobación de arte del cliente, revisión técnica y confirmación de producción se pierde en cadenas de email interminables.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">🧵</div>
+      <div class="pain-title">Dos divisiones sin visibilidad unificada</div>
+      <div class="pain-desc">Gráfica Corporativa y Gráfica Textil operan sin un sistema que consolide pedidos, estados de producción y rentabilidad por línea de negocio.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">🔄</div>
+      <div class="pain-title">Compras y proveedores sin circuito formal</div>
+      <div class="pain-desc">Las requisiciones de materiales (tintas, sustratos, avíos) no tienen un flujo de aprobación estructurado ni trazabilidad desde el pedido hasta la recepción.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">📊</div>
+      <div class="pain-title">Sin indicadores en tiempo real</div>
+      <div class="pain-desc">La dirección no tiene un dashboard para ver qué pedidos están en producción, qué está demorado, cuánto facturaron y qué margen tienen por cliente.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="solutions" id="soluciones">
+  <div class="section-label">Soluciones TOTVS Fluig</div>
+  <h2 class="section-title">Por qué Fluig es <em>perfecta</em> para The Ink Point</h2>
+  <p class="section-desc">Fluig es el software Low Code #1 de Brasil, diseñado para digitalizar exactamente los procesos que hoy frenan a empresas gráficas B2B como The Ink Point.</p>
+
+  <div class="solutions-grid">
+
+    <div class="solution-card featured">
+      <div>
+        <div class="sol-num">01 — CORE · MÁXIMA PRIORIDAD</div>
+        <div class="sol-title">Cotizador Comercial Digitalizado</div>
+        <div class="sol-desc">Un flujo digital que reemplaza el proceso manual de cotización. El equipo comercial carga el requerimiento del cliente, pasa por revisión técnica de producción, genera la cotización formal y la envía con seguimiento automático. Integrable con Protheus para crear el Pedido de Venta directamente.</div>
+        <div class="sol-tags">
+          <span class="sol-tag">Flujo multi-área</span>
+          <span class="sol-tag">Aprobación automática</span>
+          <span class="sol-tag">Exportación a Excel</span>
+          <span class="sol-tag">Integración ERP</span>
+        </div>
+      </div>
+      <div>
+        <div class="sol-inkpoint">
+          <div class="sol-inkpoint-label">🖨️ Para The Ink Point</div>
+          <p>Hoy una cotización de avíos textiles para una marca de moda o una pieza institucional para Sika implica emails de ida y vuelta entre ventas y producción. Con Fluig, el comercial inicia el flujo, producción valida factibilidad y costos, y el cliente recibe su presupuesto formal trazado. Nunca más un "¿a quién le mandaste el precio?"</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-card">
+      <div class="sol-num">02 — ALTA PRIORIDAD</div>
+      <div class="sol-title">Gestión de Aprobación de Arte y Producción</div>
+      <div class="sol-desc">Flujo digital para la aprobación del arte final por el cliente y la confirmación de entrada en producción. El cliente aprueba desde un portal, queda registrado con fecha/hora, y producción recibe la señal automáticamente.</div>
+      <div class="sol-inkpoint" style="margin-top:20px;">
+        <div class="sol-inkpoint-label">🖨️ Para The Ink Point</div>
+        <p>Fin del ciclo "te mando el PDF por mail → me escribís que aprobaste → lo pierdo". Cada arte tiene su expediente digital, historial de versiones y aprobación formal del cliente.</p>
+      </div>
+      <div class="sol-tags" style="margin-top:20px;">
+        <span class="sol-tag">Portal cliente</span>
+        <span class="sol-tag">Firma digital</span>
+        <span class="sol-tag">Historial versiones</span>
+      </div>
+    </div>
+
+    <div class="solution-card">
+      <div class="sol-num">03 — ALTA PRIORIDAD</div>
+      <div class="sol-title">Gestión Documental Centralizada</div>
+      <div class="sol-desc">Repositorio único para artes finales, órdenes de compra, remitos, certificados de calidad y fichas técnicas de producto. Organizado por cliente, trabajo y fecha. Búsqueda en segundos.</div>
+      <div class="sol-inkpoint" style="margin-top:20px;">
+        <div class="sol-inkpoint-label">🖨️ Para The Ink Point</div>
+        <p>Cuando el área de textil busca el archivo original de una etiqueta de cuero de temporadas anteriores, o cuando compras necesita el remito de una entrega: lo encuentra en segundos, no en horas.</p>
+      </div>
+      <div class="sol-tags" style="margin-top:20px;">
+        <span class="sol-tag">ECM cloud</span>
+        <span class="sol-tag">Control de acceso</span>
+        <span class="sol-tag">Búsqueda avanzada</span>
+      </div>
+    </div>
+
+    <div class="solution-card">
+      <div class="sol-num">04 — MEDIA PRIORIDAD</div>
+      <div class="sol-title">Requisiciones y Compras de Materiales</div>
+      <div class="sol-desc">Circuito digital para solicitud de materiales (tintas, papeles, sustratos, avíos). Con aprobaciones iniciales según monto, generación de orden de compra en ERP y trazabilidad hasta la recepción.</div>
+      <div class="sol-inkpoint" style="margin-top:20px;">
+        <div class="sol-inkpoint-label">🖨️ Para The Ink Point</div>
+        <p>Compras de insumos para trabajos puntuales — como papel especial para un cliente de gran formato — con aprobación gerencial automatizada y sin papeles perdidos.</p>
+      </div>
+      <div class="sol-tags" style="margin-top:20px;">
+        <span class="sol-tag">Aprobación por monto</span>
+        <span class="sol-tag">Orden de compra</span>
+        <span class="sol-tag">Trazabilidad</span>
+      </div>
+    </div>
+
+    <div class="solution-card">
+      <div class="sol-num">05 — MEDIA PRIORIDAD</div>
+      <div class="sol-title">Portal de Clientes B2B</div>
+      <div class="sol-desc">Portal self-service donde clientes corporativos de The Ink Point solicitan trabajos, suben artes, aprueban presupuestos, hacen seguimiento del estado de sus pedidos y descargan remitos o facturas.</div>
+      <div class="sol-inkpoint" style="margin-top:20px;">
+        <div class="sol-inkpoint-label">🖨️ Para The Ink Point</div>
+        <p>Un diferenciador concreto frente a la competencia. Sika, Casa Lucía y los clientes más importantes podrán gestionar sus trabajos sin necesidad de llamar o escribir por WhatsApp.</p>
+      </div>
+      <div class="sol-tags" style="margin-top:20px;">
+        <span class="sol-tag">24/7 self-service</span>
+        <span class="sol-tag">Estado en tiempo real</span>
+        <span class="sol-tag">Descarga documentos</span>
+      </div>
+    </div>
+
+    <div class="solution-card">
+      <div class="sol-num">06 — DIFERENCIADOR</div>
+      <div class="sol-title">Dashboard de Producción e Indicadores</div>
+      <div class="sol-desc">Panel central con el estado de todos los trabajos en producción, alertas de demoras, indicadores de rentabilidad por cliente y por línea (Textil / Corporativa) y KPIs comerciales para la dirección.</div>
+      <div class="sol-inkpoint" style="margin-top:20px;">
+        <div class="sol-inkpoint-label">🖨️ Para The Ink Point</div>
+        <p>La dirección ve en tiempo real qué trabajos están en curso, cuáles en riesgo de demora y cuál es el margen por cliente — sin esperar el cierre de mes.</p>
+      </div>
+      <div class="sol-tags" style="margin-top:20px;">
+        <span class="sol-tag">KPIs en tiempo real</span>
+        <span class="sol-tag">Alertas automáticas</span>
+        <span class="sol-tag">Por división</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section class="budget" id="presupuesto">
+  <div class="budget-container">
+  <div class="section-label">Propuesta Económica</div>
+  <h2 class="section-title">La inversión, <em>en detalle</em></h2>
+  <p class="section-desc">Condiciones especiales negociadas con TOTVS, válidas exclusivamente durante el mes de mayo de 2026.</p>
+    <div class="pricing-note">
+      <div class="pricing-note-icon">⚠️</div>
+      <div>Estas condiciones fueron revisadas en conjunto con TOTVS especialmente para The Ink Point. <strong>TOTVS aprueba estas condiciones exclusivamente durante el mes de mayo.</strong><br><br>
+        <strong>La implementación está a cargo de Xperts Consulting.</strong> La tasa de adhesión, el fee mensual y el cloud están a cargo de TOTVS Argentina.</div>
+    </div>
+
+    <div class="pricing-table">
+      <div class="pricing-table-header">
+        <span>Descripción</span>
+        <span style="text-align:right">Única vez USD</span>
+        <span style="text-align:right">Mensual USD</span>
+        <span style="text-align:right">Cloud Mensual</span>
+      </div>
+
+      <div class="pricing-row section-header">
+        <span>Tasa de Adhesión</span><span></span><span></span><span></span>
+      </div>
+      <div class="pricing-row">
+        <div class="pr-name">
+          Tasa de Adhesión Fluig — Mercado Internacional
+          <small>Antes: 6 cuotas de $1.400.000 + IVA → Ahora: 12 cuotas de $700.000 + IVA</small>
+        </div>
+        <div class="pr-val discount">$8.400.000 + IVA</div>
+        <div class="pr-val muted">—</div>
+        <div class="pr-val muted">—</div>
+      </div>
+
+      <div class="pricing-row section-header">
+        <span>Fee Mensual</span><span></span><span></span><span></span>
+      </div>
+      <div class="pricing-row">
+        <div class="pr-name">
+          Fee mensual Fluig — 25 usuarios
+          <small>Descuento especial 15% negociado con TOTVS</small>
+        </div>
+        <div class="pr-val muted">—</div>
+        <div class="pr-val highlight">USD 231/mes + IVA</div>
+        <div class="pr-val muted">—</div>
+      </div>
+
+      <div class="pricing-row section-header">
+        <span>Cloud Mensual</span><span></span><span></span><span></span>
+      </div>
+      <div class="pricing-row">
+        <div class="pr-name">
+          Cloud Fluig — Hosting e infraestructura
+          <small>30% de descuento especial sobre precio lista</small>
+        </div>
+        <div class="pr-val muted">—</div>
+        <div class="pr-val muted">—</div>
+        <div class="pr-val highlight">USD 227/mes + IVA</div>
+      </div>
+
+      <div class="pricing-row section-header">
+        <span>Implementación</span><span></span><span></span><span></span>
+      </div>
+      <div class="pricing-row">
+        <div class="pr-name">
+          Implementación a cargo de Xperts Consulting
+          <small>108 horas estimadas × USD 45/h · Corresponde al desarrollo inicial más prioritario — cada desarrollo adicional dentro de Fluig tiene su propio costo según horas a cotizar</small>
+        </div>
+        <div class="pr-val discount">USD 4.860 + IVA</div>
+        <div class="pr-val muted">—</div>
+        <div class="pr-val muted">—</div>
+      </div>
+      <div class="pricing-row">
+        <div class="pr-name">
+          Plan de pagos — 12 cuotas mensuales de USD 405
+          <small>Plan extendido de 6 a 12 cuotas</small>
+        </div>
+        <div class="pr-val highlight">12 × USD 405</div>
+        <div class="pr-val highlight">USD 405/mes</div>
+        <div class="pr-val muted">—</div>
+      </div>
+
+      <div class="pricing-total">
+        <div class="pt-label">Total implementación</div>
+        <div></div>
+        <div></div>
+        <div class="pt-val">USD 4.860 + IVA</div>
+      </div>
+    </div>
+
+    <div class="payment-plans">
+      <div class="payment-card">
+        <div class="payment-type">Tasa de Adhesión</div>
+        <div class="payment-amount"><sup>$</sup>700.000</div>
+        <div class="payment-sub">por mes × 12 cuotas + IVA</div>
+        <div class="payment-detail">
+          <strong>Propuesta original TOTVS:</strong> 6 cuotas de $1.400.000<br>
+          <strong>Condición actual:</strong> 12 cuotas de $700.000<br>
+          Misma inversión total, el doble del plazo
+        </div>
+      </div>
+      <div class="payment-card recommended">
+        <div class="rec-badge">✓ Implementación Xperts</div>
+        <div class="payment-type">Implementación mensual</div>
+        <div class="payment-amount"><sup>USD </sup>405</div>
+        <div class="payment-sub">por mes × 12 cuotas + IVA</div>
+        <div class="payment-detail">
+          <strong>Total:</strong> USD 4.860 + IVA<br>
+          <strong>Hora:</strong> USD 45/h · 108 horas estimadas<br>
+          <strong>⚠️ Importante:</strong> Este costo corresponde al desarrollo inicial más prioritario. Cada desarrollo adicional dentro de Fluig tiene su propio costo según las horas a cotizar.<br><br>
+          <em>Los desarrollos propuestos están basados en la información disponible hasta ahora. Podemos realizar un relevamiento más profundo antes de la propuesta formal.</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASHFLOW CHART -->
+    <div class="cashflow-section">
+      <div class="section-label" style="margin-bottom:12px;">Flujo de caja — primeros 12 meses</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--ink);margin-bottom:10px;">¿Cuánto sale <em style="color:var(--red-deep);font-style:italic">cada mes?</em></h3>
+      <p style="font-size:15px;color:var(--text-soft);margin-bottom:32px;">Vista mensual de la inversión durante el primer año. Todos los valores en USD + IVA (implementación) y ARS + IVA (tasa de adhesión).</p>
+      <div class="cashflow-chart" id="cashflowChart"></div>
+      <div class="cashflow-legend">
+        <div class="cf-legend-item"><span class="cf-dot" style="background:#cc2218"></span>Fee mensual (USD 231)</div>
+        <div class="cf-legend-item"><span class="cf-dot" style="background:#a81a11"></span>Cloud mensual (USD 227)</div>
+        <div class="cf-legend-item"><span class="cf-dot" style="background:#1a1a1a"></span>Implementación (USD 405)</div>
+        <div class="cf-legend-item"><span class="cf-dot" style="background:#c9a84c"></span>Tasa adhesión ($700K ARS · eje derecho)</div>
+      </div>
+      <p style="font-size:12px;color:var(--text-muted);margin-top:16px;">* Tasa de adhesión expresada en pesos argentinos (ARS). El resto de los valores en dólares (USD). Todos los montos son + IVA.</p>
+    </div>
+
+    <style>
+    .cashflow-section {
+      background: #fff;
+      border-radius: 24px;
+      padding: 48px;
+      border: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    .cashflow-chart {
+      width: 100%;
+      height: 340px;
+      position: relative;
+    }
+    .cashflow-legend {
+      display: flex; flex-wrap: wrap; gap: 24px;
+      margin-top: 24px;
+    }
+    .cf-legend-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-soft);
+    }
+    .cf-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .cf-bar-group { display: flex; align-items: flex-end; gap: 3px; }
+    .cf-bar { border-radius: 4px 4px 0 0; transition: opacity 0.2s; cursor: pointer; }
+    .cf-bar:hover { opacity: 0.8; }
+    .cf-tooltip {
+      position: absolute;
+      background: var(--ink); color: #fff;
+      padding: 10px 14px; border-radius: 10px;
+      font-size: 12px; line-height: 1.6;
+      pointer-events: none; z-index: 10;
+      white-space: nowrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      display: none;
+    }
+    </style>
+
+    <script>
+    (function() {
+      const months = ['Mes 1','Mes 2','Mes 3','Mes 4','Mes 5','Mes 6','Mes 7','Mes 8','Mes 9','Mes 10','Mes 11','Mes 12'];
+      const fee = 231;
+      const cloud = 227;
+      const impl = 405;
+      const tasa = 700000;
+
+      const container = document.getElementById('cashflowChart');
+      const W = container.offsetWidth || 760;
+      const H = 340;
+      const padL = 60, padR = 80, padT = 20, padB = 60;
+      const chartW = W - padL - padR;
+      const chartH = H - padT - padB;
+
+      const maxUSD = fee + cloud + impl;
+      const maxARS = tasa;
+
+      const barGroupW = chartW / 12;
+      const barW = barGroupW * 0.2;
+      const gap = barW * 0.15;
+
+      let svg = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">`;
+
+      for (let i = 0; i <= 4; i++) {
+        const y = padT + (chartH / 4) * i;
+        const val = Math.round(maxUSD - (maxUSD / 4) * i);
+        svg += `<line x1="${padL}" y1="${y}" x2="${padL + chartW}" y2="${y}" stroke="#e8e8e8" stroke-width="1"/>`;
+        svg += `<text x="${padL - 8}" y="${y + 4}" text-anchor="end" font-size="11" fill="#8a8a8a" font-family="DM Sans, sans-serif">$${val}</text>`;
+      }
+
+      for (let i = 0; i <= 4; i++) {
+        const y = padT + (chartH / 4) * i;
+        const val = Math.round((maxARS - (maxARS / 4) * i) / 1000);
+        svg += `<text x="${padL + chartW + 10}" y="${y + 4}" text-anchor="start" font-size="10" fill="#c9a84c" font-family="DM Sans, sans-serif">$${val}K</text>`;
+      }
+
+      svg += `<text x="${padL - 40}" y="${padT + chartH/2}" text-anchor="middle" font-size="10" fill="#8a8a8a" font-family="DM Sans, sans-serif" transform="rotate(-90,${padL-40},${padT + chartH/2})">USD / mes</text>`;
+      svg += `<text x="${padL + chartW + 60}" y="${padT + chartH/2}" text-anchor="middle" font-size="10" fill="#c9a84c" font-family="DM Sans, sans-serif" transform="rotate(90,${padL+chartW+60},${padT + chartH/2})">ARS / mes</text>`;
+
+      months.forEach((m, i) => {
+        const groupX = padL + i * barGroupW + barGroupW * 0.08;
+
+        const vals = [
+          { val: fee, color: '#cc2218', label: 'Fee mensual', unit: 'USD', max: maxUSD },
+          { val: cloud, color: '#a81a11', label: 'Cloud', unit: 'USD', max: maxUSD },
+          { val: impl, color: '#1a1a1a', label: 'Implementación', unit: 'USD', max: maxUSD },
+        ];
+
+        vals.forEach((item, j) => {
+          const barH = (item.val / item.max) * chartH;
+          const x = groupX + j * (barW + gap);
+          const y = padT + chartH - barH;
+          svg += `<rect class="cf-bar" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${barH.toFixed(1)}" rx="3" fill="${item.color}" data-label="${m}" data-item="${item.label}" data-val="${item.unit === 'ARS' ? '$'+item.val.toLocaleString('es-AR') : 'USD '+item.val}"/>`;
+        });
+
+        const arsBarH = (tasa / maxARS) * chartH;
+        const arsX = groupX + 3 * (barW + gap);
+        const arsY = padT + chartH - arsBarH;
+        svg += `<rect class="cf-bar" x="${arsX.toFixed(1)}" y="${arsY.toFixed(1)}" width="${barW.toFixed(1)}" height="${arsBarH.toFixed(1)}" rx="3" fill="#c9a84c" data-label="${m}" data-item="Tasa adhesión" data-val="$700.000 ARS"/>`;
+
+        const labelX = groupX + (3 * (barW + gap) + barW) / 2;
+        svg += `<text x="${labelX.toFixed(1)}" y="${padT + chartH + 20}" text-anchor="middle" font-size="10" fill="#8a8a8a" font-family="DM Sans, sans-serif">${m}</text>`;
+      });
+
+      svg += `<line x1="${padL}" y1="${padT + chartH}" x2="${padL + chartW}" y2="${padT + chartH}" stroke="#d0d0d0" stroke-width="1.5"/>`;
+      svg += `</svg>`;
+      svg += `<div class="cf-tooltip" id="cfTooltip"></div>`;
+      container.innerHTML = svg;
+
+      const tooltip = document.getElementById('cfTooltip');
+      container.querySelectorAll('.cf-bar').forEach(bar => {
+        bar.addEventListener('mouseenter', (e) => {
+          const rect = bar.getBoundingClientRect();
+          const cRect = container.getBoundingClientRect();
+          tooltip.innerHTML = `<strong>${bar.dataset.label}</strong><br>${bar.dataset.item}: ${bar.dataset.val} + IVA`;
+          tooltip.style.display = 'block';
+          tooltip.style.left = (rect.left - cRect.left + rect.width/2 - 60) + 'px';
+          tooltip.style.top = (rect.top - cRect.top - 70) + 'px';
+        });
+        bar.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+      });
+    })();
+    </script>
+
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap" id="roadmap">
+  <div class="section-label">Plan de Implementación</div>
+  <h2 class="section-title">Roadmap en <em>3 meses</em></h2>
+  <p class="section-desc">Implementación ágil para que The Ink Point esté operativo con Fluig antes de que termine el primer trimestre.</p>
+
+  <div class="timeline">
+    <div class="timeline-phase">
+      <div class="phase-dot p1">1</div>
+      <div class="phase-weeks">Semanas 1 – 3</div>
+      <div class="phase-title">Kick-off y Configuración</div>
+      <ul class="phase-items">
+        <li>Relevamiento de procesos comerciales y operativos</li>
+        <li>Definición de flujos de aprobación por área</li>
+        <li>Diseño de templates de cotización y arte</li>
+        <li>Configuración del entorno cloud</li>
+        <li>Definición de usuarios, roles y accesos</li>
+      </ul>
+    </div>
+    <div class="timeline-phase">
+      <div class="phase-dot p2">2</div>
+      <div class="phase-weeks">Semanas 4 – 8</div>
+      <div class="phase-title">Implementación y Capacitación</div>
+      <ul class="phase-items">
+        <li>Configuración del flujo de cotización comercial en Fluig</li>
+        <li>Integración con Protheus para generación de Pedido de Venta</li>
+        <li>Templates de cotización formales configurados</li>
+        <li>Capacitación al equipo comercial y de producción</li>
+        <li>Pruebas con casos reales de cotización de The Ink Point</li>
+      </ul>
+      <p style="margin-top:16px;font-size:13px;color:var(--red-deep);font-weight:600;">★ Foco exclusivo: Cotizador Comercial Digitalizado — proceso de máxima prioridad</p>
+    </div>
+    <div class="timeline-phase">
+      <div class="phase-dot p3">3</div>
+      <div class="phase-weeks">Semanas 9 – 12</div>
+      <div class="phase-title">Go-live y Estabilización</div>
+      <ul class="phase-items">
+        <li>Go-live con todos los usuarios</li>
+        <li>Portal de clientes B2B habilitado</li>
+        <li>Dashboard de producción activo</li>
+        <li>Soporte post-implementación incluido</li>
+        <li>Ajustes y optimizaciones finales</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHY XPERTS -->
+<section class="whyus">
+  <div class="section-label">Por qué Xperts Consulting</div>
+  <h2 class="section-title">El socio que <em>acompaña</em></h2>
+  <p class="section-desc">Partner oficial TOTVS en Argentina con más de 25 años de experiencia en transformación digital de empresas medianas y grandes en LATAM.</p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🇦🇷</div>
+      <div class="why-title">Equipo local en Buenos Aires</div>
+      <div class="why-desc">Base en Buenos Aires con capacidad de visitas presenciales y reuniones de seguimiento en persona. Conocemos el mercado B2B argentino, las empresas que trabajan con The Ink Point y sus particularidades.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🏆</div>
+      <div class="why-title">Partner Oficial TOTVS Argentina</div>
+      <div class="why-desc">Certificación que garantiza implementación con los más altos estándares del fabricante. Acceso directo al soporte TOTVS y a todas las actualizaciones del producto sin costo adicional.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚙️</div>
+      <div class="why-title">Metodología de 5 etapas</div>
+      <div class="why-desc">Diagnóstico → Diseño → Configuración → Capacitación → Soporte. Cada etapa tiene entregables concretos y el equipo de Xperts acompaña a The Ink Point en cada una.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🔒</div>
+      <div class="why-title">Seguridad y compliance</div>
+      <div class="why-desc">Infraestructura cloud certificada ISO 27.001. Los archivos de arte, las cotizaciones y la información confidencial de clientes siempre protegidos con estándares internacionales.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💡</div>
+      <div class="why-title">Soluciones ya desarrolladas</div>
+      <div class="why-desc">Cotizador para ventas, ABM de Productos, Gestión de Requisiciones y Compras ya están desarrollados. Aceleran la implementación y reducen costos de desarrollo a medida.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📈</div>
+      <div class="why-title">Retorno de inversión medible</div>
+      <div class="why-desc">Reducción del trabajo manual, centralización de procesos y visibilidad en tiempo real generan eficiencias concretas desde el primer mes de operación con Fluig.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <h2>¿The Ink Point lista para <em>digitalizar su día a día?</em></h2>
+  <p>Transformá cada proceso manual en un flujo ágil y ordenado. Hablemos esta semana y arrancamos el diagnóstico sin costo.</p>
+
+  <div class="cta-cards">
+    <div class="cta-contact">
+      <div class="cta-contact-name">Rocío Pardo</div>
+      <div class="cta-contact-role">VP · Xperts Consulting</div>
+      <div class="cta-contact-info">
+        <a href="tel:+541132335747">+54 11 3233-5747</a><br>
+        <a href="mailto:rocio.pardo@xpertsconsulting.com">rocio.pardo@xpertsconsulting.com</a><br>
+        WhatsApp disponible
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-btns">
+    <a href="mailto:rocio.pardo@xpertsconsulting.com?subject=The Ink Point × TOTVS Fluig - Avanzamos" class="btn-white">📩 Confirmar propuesta</a>
+    <a href="https://wa.me/541132335747?text=Hola Rocío, quiero avanzar con la propuesta de TOTVS Fluig para The Ink Point" class="btn-outline-white">💬 WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">The Ink Point × Xperts Consulting × TOTVS Fluig</div>
+  <div>Propuesta Comercial 2026 · Condiciones válidas en mayo</div>
+  <div>© 2026 Xperts Consulting S.A. — Partner Oficial TOTVS Argentina</div>
+</footer>
+
+</body>
+</html>
